@@ -59,12 +59,12 @@ jobs:
 
     - name: Apply Kubernetes manifests
       run: |
-        # Apply the existing k8s-deployment.yaml file
+        # ✅ FIXED: Using your actual filename k8s-deployment.yaml
         kubectl apply -f k8s-deployment.yaml
         
     - name: Update deployment image
       run: |
-        # Now update the image (this will work because deployment exists)
+        # ✅ Now this will work because the deployment exists
         kubectl set image deployment/student-backend student-backend=$IMAGE_NAME:$GITHUB_SHA
         kubectl rollout status deployment/student-backend --timeout=300s
         
@@ -76,3 +76,5 @@ jobs:
         kubectl get pods
         echo "=== Services ==="
         kubectl get services
+        echo "=== Service Details ==="
+        kubectl describe service student-backend-service
