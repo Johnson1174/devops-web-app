@@ -8,7 +8,7 @@ on:
 
 env:
   DOCKER_REGISTRY: docker.io
-  IMAGE_NAME: johnson1174/student-backend  # ✅ Changed from student_backend to student-backend
+  IMAGE_NAME: johnson1174/student-backend
   GKE_CLUSTER: student-portal
   GKE_LOCATION: us-central1-a
   GCP_PROJECT: ku-gcp-hackathon
@@ -59,10 +59,16 @@ jobs:
         location: ${{ env.GKE_LOCATION }}
         project_id: ${{ env.GCP_PROJECT }}
 
+    - name: Apply Kubernetes manifests
+      run: |
+        # Apply the deployment and service (this creates them if they don't exist)
+        kubectl apply -f deployment.yaml
+        
     - name: Deploy to GKE
       run: |
-        kubectl set image deployment/student-backend student-backend=$IMAGE_NAME:$GITHUB_SHA  # ✅ Fixed deployment name
-        kubectl rollout status deployment/student-backend  # ✅ Fixed deployment name
+        # Now update the image (this will work because deployment exists)
+        kubectl set image deployment/student-backend student-backend=$IMAGE_NAME:$GITHUB_SHA
+        kubectl rollout status deployment/student-backend
         
     - name: Verify deployment
       run: |
