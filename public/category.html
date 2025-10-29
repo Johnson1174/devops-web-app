@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BuildMart - Construction Materials</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f5f5f5;
+      color: #333;
+    }
+    header {
+      background: #004aad;
+      color: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    header nav a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    header nav a[href="/"] {
+      font-weight: bold;
+    }
+    #cart-count {
+      background: #ff0000;
+      color: #fff;
+      border-radius: 50%;
+      padding: 2px 6px;
+      font-size: 0.8rem;
+      margin-left: 5px;
+    }
+    .category-section {
+      background: #fff;
+      border-radius: 10px;
+      margin: 20px auto;
+      padding: 20px;
+      width: 90%;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .category-section h2 {
+      border-bottom: 2px solid #004aad;
+      padding-bottom: 5px;
+    }
+    .brand-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 15px;
+    }
+    .brand-card {
+      background: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 15px;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+    .brand-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    }
+    .brand-card h4 {
+      margin: 10px 0;
+    }
+    .brand-card button {
+      background: #004aad;
+      color: #fff;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .brand-card button:hover {
+      background: #003580;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #222;
+      color: #ccc;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">🏗️ BuildMart</div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/login">Login</a>
+      <a href="/signup">Signup</a>
+      <a href="/cart">Cart 🛒<span id="cart-count">0</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Cement & Concrete -->
+    <section class="category-section">
+      <h2>Cement & Concrete</h2>
+      <p>Types: Portland, White, Ready Mix</p>
+      <div class="brand-list">
+        <div class="brand-card">
+          <h4>UltraTech Cement</h4>
+          <p>₹420 per 50 kg bag</p>
+          <button class="add-to-cart" data-id="1001" data-name="UltraTech Cement" data-price="420" data-type="Ordinary Portland Cement" data-brand="UltraTech">Add to Cart</button>
+        </div>
+        <div class="brand-card">
+          <h4>ACC Cement</h4>
+          <p>₹410 per 50 kg bag</p>
+          <button class="add-to-cart" data-id="1002" data-name="ACC Cement" data-price="410" data-type="Ordinary Portland Cement" data-brand="ACC">Add to Cart</button>
+        </div>
+        <div class="brand-card">
+          <h4>Ambuja Cement</h4>
+          <p>₹415 per 50 kg bag</p>
+          <button class="add-to-cart" data-id="1003" data-name="Ambuja Cement" data-price="415" data-type="Ordinary Portland Cement" data-brand="Ambuja">Add to Cart</button>
+        </div>
+        <div class="brand-card">
+          <h4>Ramco Cement</h4>
+          <p>₹405 per 50 kg bag</p>
+          <button class="add-to-cart" data-id="1004" data-name="Ramco Cement" data-price="405" data-type="Ordinary Portland Cement" data-brand="Ramco">Add to Cart</button>
+        </div>
+        <div class="brand-card">
+          <h4>Dalmia Cement</h4>
+          <p>₹395 per 50 kg bag</p>
+          <button class="add-to-cart" data-id="1005" data-name="Dalmia Cement" data-price="395" data-type="Ordinary Portland Cement" data-brand="Dalmia">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bricks & Blocks -->
+    <section class="category-section">
+      <h2>Bricks & Blocks</h2>
+      <p>Types: Clay, Concrete, Fly Ash</p>
+      <div class="brand-list">
+        <div class="brand-card">
+          <h4>Jindal Bricks</h4>
+          <p>₹8 per brick</p>
+          <button class="add-to-cart" data-id="1006" data-name="Jindal Bricks" data-price="8">Add to Cart</button>
+        </div>
+        <div class="brand-card">
+          <h4>Wienerberger</h4>
+          <p>₹10 per brick</p>
+          <button class="add-to-cart" data-id="1007" data-name="Wienerberger" data-price="10">Add to Cart</button>
+        </div>
+        <div class="brand-card">
+          <h4>Magicrete Blocks</h4>
+          <p>₹60 per block</p>
+          <button class="add-to-cart" data-id="1008" data-name="Magicrete Blocks" data-price="60">Add to Cart</button>
+        </div>
+        <div class="brand-card">
+          <h4>Aerocon Blocks</h4>
+          <p>₹65 per block</p>
+          <button class="add-to-cart" data-id="1009" data-name="Aerocon Blocks" data-price="65">Add to Cart</button>
+        </div>
+        <div class="brand-card">
+          <h4>Ultratech AAC Blocks</h4>
+          <p>₹70 per block</p>
+          <button class="add-to-cart" data-id="1010" data-name="Ultratech AAC Blocks" data-price="70">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sand & Aggregates -->
+    <section class="category-section">
+      <h2>Sand & Aggregates</h2>
+      <p>Types: M-Sand, P-Sand, Gravel</p>
+      <div class="brand-list">
+        <div class="brand-card">
+          <h4>Robo Silicon</h4>
+          <p>₹1,200 per ton</p>
+          <button class="add-to-cart" data-id="1011" data-name="Robo Silicon" data-price="1200">Add to Cart</button>
+        </div>
+        <div class="brand-card">
+          <h4>Psand India</h4>
+          <p>₹1,000 per ton</p>
+          <button class="add-to-cart" data-id="1012" data-name="Psand India" data-price="1000">Add to Cart</button>
+        </div>
+        <div class="brand-card">
+          <h4>Ashapura Aggregates</h4>
+          <p>₹950 per ton</p>
+          <button class="add-to-cart" data-id="1013" data-name="Ashapura Aggregates" data-price="950">Add to Cart</button>
+        </div>
+        <div class="brand-card">
+          <h4>Soma M-Sand</h4>
+          <p>₹1,050 per ton</p>
+          <button class="add-to-cart" data-id="1014" data-name="Soma M-Sand" data-price="1050">Add to Cart</button>
+        </div>
+        <div class="brand-card">
+          <h4>VSI Sand</h4>
+          <p>₹1,100 per ton</p>
+          <button class="add-to-cart" data-id="1015" data-name="VSI Sand" data-price="1100">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pipes & Fittings -->
+    <section class="category-section">
+      <h2>Pipes & Fittings</h2>
+      <p>Types: PVC, GI, CPVC, Fittings</p>
+      <div class="brand-list">
+        <div class="brand-card">
+          <h4>Astral Pipes</h4>
+          <p>₹120 per metre</p>
+          <button class="add-to-cart" data-id="1016" data-name="Astral Pipes" data-price="120">Add to Cart</button>
+        </div>
+        <div class="brand-card">
+          <h4>Supreme Pipes</h4>
+          <p>₹110 per metre</p>
+          <button class="add-to-cart" data-id="1017" data-name="Supreme Pipes" data-price="110">Add to Cart</button>
+        </div>
+        <div class="brand-card">
+          <h4>Finolex Pipes</h4>
+          <p>₹100 per metre</p>
+          <button class="add-to-cart" data-id="1018" data-name="Finolex Pipes" data-price="100">Add to Cart</button>
+        </div>
+        <div class="brand-card">
+          <h4>Prince Pipes</h4>
+          <p>₹115 per metre</p>
+          <button class="add-to-cart" data-id="1019" data-name="Prince Pipes" data-price="115">Add to Cart</button>
+        </div>
+        <div class="brand-card">
+          <h4>APL Apollo</h4>
+          <p>₹125 per metre</p>
+          <button class="add-to-cart" data-id="1020" data-name="APL Apollo" data-price="125">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Steel & Metals -->
+    <section class="category-section">
+      <h2>Steel & Metals</h2>
+      <p>Types: Rebars, Angle Iron</p>
+      <div class="brand-list">
+        <div class="brand-card">
+          <h4>Tata Tiscon</h4>
+          <p>₹58,000 per ton</p>
+          <button class="add-to-cart" data-id="1021" data-name="Tata Tiscon" data-price="58000">Add to Cart</button>
+        </div>
+        <div class="brand-card">
+          <h4>JSW Steel</h4>
+          <p>₹56,500 per ton</p>
+          <button class="add-to-cart" data-id="1022" data-name="JSW Steel" data-price="56500">Add to Cart</button>
+        </div>
+        <div class="brand-card">
+          <h4>Sail TMT</h4>
+          <p>₹57,000 per ton</p>
+          <button class="add-to-cart" data-id="1023" data-name="Sail TMT" data-price="57000">Add to Cart</button>
+        </div>
+        <div class="brand-card">
+          <h4>Vizag Steel</h4>
+          <p>₹57,800 per ton</p>
+          <button class="add-to-cart" data-id="1024" data-name="Vizag Steel" data-price="57800">Add to Cart</button>
+        </div>
+        <div class="brand-card">
+          <h4>Jindal Steel</h4>
+          <p>₹59,000 per ton</p>
+          <button class="add-to-cart" data-id="1025" data-name="Jindal Steel" data-price="59000">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Electrical -->
+    <section class="category-section">
+      <h2>Electrical</h2>
+      <p>Types: Wires, Switches, Lighting, Fittings</p>
+      <div class="brand-list">
+        <div class="brand-card">
+          <h4>Havells</h4>
+          <p>₹35 – ₹120 per metre (wire)</p>
+          <button class="add-to-cart" data-id="1026" data-name="Havells" data-price="35">Add to Cart</button>
+        </div>
+        <div class="brand-card">
+          <h4>Anchor</h4>
+          <p>₹30 – ₹100 per metre (wire)</p>
+          <button class="add-to-cart" data-id="1027" data-name="Anchor" data-price="30">Add to Cart</button>
+        </div>
+        <div class="brand-card">
+          <h4>Polycab</h4>
+          <p>₹40 – ₹130 per metre (wire)</p>
+          <button class="add-to-cart" data-id="1028" data-name="Polycab" data-price="40">Add to Cart</button>
+        </div>
+        <div class="brand-card">
+          <h4>Finolex</h4>
+          <p>₹38 – ₹110 per metre (wire)</p>
+          <button class="add-to-cart" data-id="1029" data-name="Finolex" data-price="38">Add to Cart</button>
+        </div>
+        <div class="brand-card">
+          <h4>RR Kabel</h4>
+          <p>₹42 – ₹125 per metre (wire)</p>
+          <button class="add-to-cart" data-id="1030" data-name="RR Kabel" data-price="42">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 BuildMart. All rights reserved.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

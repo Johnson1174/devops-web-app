@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - BuildMart</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="header-top">
+      <div class="logo">BuildMart</div>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/signup">Signup</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <h1 style="text-align: center; margin-top: 2rem;">Login to Your Account</h1>
+    <form id="login-form">
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" required placeholder="Enter your phone number">
+      <label for="password">Password:</label>
+      <input type="password" id="password" required placeholder="Enter your password">
+      <button type="submit">Login</button>
+    </form>
+    <p style="text-align: center; margin-top: 1rem;">Don't have an account? <a href="/signup">Sign up here</a></p>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

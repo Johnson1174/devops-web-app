@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart - BuildMart</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="header-top">
+      <div class="logo">BuildMart</div>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/login">Login</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <h1 style="text-align: center; margin-top: 2rem;">Your Shopping Cart</h1>
+    <section id="cart-items">
+      <!-- Cart items will be loaded here -->
+    </section>
+    <form id="checkout-form">
+      <h2>Shipping & Payment</h2>
+      <label for="delivery-date">Delivery Date:</label>
+      <input type="date" id="delivery-date" required>
+      <label for="address">Delivery Address:</label>
+      <textarea id="address" required placeholder="Enter your full delivery address"></textarea>
+      <label for="payment-info">Payment Information:</label>
+      <input type="text" id="payment-info" placeholder="Card Number" required>
+      <input type="text" id="expiry" placeholder="MM/YY" required style="width: 48%; margin-right: 4%;">
+      <input type="text" id="cvv" placeholder="CVV" required style="width: 48%;">
+      <button type="submit">Place Order</button>
+    </form>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GS Agencies - Building Materials Shop</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+  <header>
+    <div class="header-top">
+      <div class="logo">GS Agencies</div>
+      <div class="search-bar">
+        <input type="text" id="search" placeholder="Search for building materials...">
+        <button id="search-btn">Search</button>
+      </div>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/login">Login</a>
+        <a href="/signup">Signup</a>
+        <a href="/cart">Cart (<span id="cart-count">0</span>)</a>
+      </nav>
+    </div>
+    <div class="header-bottom">
+      <nav>
+        <a href="#categories">Categories</a>
+        <a href="#deals">Deals</a>
+        <a href="#new-arrivals">New Arrivals</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <h1>Welcome to GS Agencies</h1>
+      <p>Your one-stop shop for all building materials. Quality products at competitive prices with fast delivery!</p>
+    </section>
+    <section id="categories" class="categories">
+      <h2>Shop by Category</h2>
+      <div class="category-grid">
+        <div class="category" data-category="Cement & Concrete" onclick="window.location.href='/category?cat=Cement & Concrete'">
+          <img src="/img/ut-cement.png" alt="Cement & Concrete" style="width: 90px;height: 90px;">
+          <h3>Cement & Concrete</h3>
+          <p>Portland, White, Ready Mix</p>
+        </div>
+        <div class="category" data-category="Bricks & Blocks" onclick="window.location.href='/category?cat=Bricks & Blocks'">
+          <img src="/img/b9-vijayawada-bricks.jpg" alt="Bricks & Blocks" style="width: 90px;height: 90px;">
+          <h3>Bricks & Blocks</h3>
+          <p>Clay, Concrete, Fly Ash</p>
+        </div>
+        <div class="category" data-category="Sand & Aggregates" onclick="window.location.href='/category?cat=Sand & Aggregates'">
+          <img src="/img/construction-sand.jpg" alt="Sand & Aggregates" style="width: 90px;height: 90px;">
+          <h3>Sand & Aggregates</h3>
+          <p>M-Sand, P-Sand, Gravel</p>
+        </div>
+        <div class="category" data-category="Pipes & Fittings" onclick="window.location.href='/category?cat=Pipes & Fittings'">
+          <img src="/img/pipe.jpg" alt="Pipes & Fittings"  style="width: 90px;height: 90px;">
+          <h3>Pipes & Fittings</h3>
+          <p>PVC, GI, Fittings</p>
+        </div>
+        <div class="category" data-category="Steel & Metals" onclick="window.location.href='/category?cat=Steel & Metals'">
+          <img src="/img/steel.jpeg" alt="Steel & Metals" style="width: 90px;height: 90px;">
+          <h3>Steel & Metals</h3>
+          <p>Rebars, Angle Iron</p>
+        </div>
+        <div class="category" data-category="Electrical" onclick="window.location.href='/category?cat=Electrical'">
+          <img src="/img/electric-img-service.jpg" alt="Electrical" style="width: 90px;height: 90px;" >
+          <h3>Electrical</h3>
+          <p>Wires, Switches, Sockets</p>
+        </div>
+      </div>
+    </section>
+    <section id="deals" class="deals">
+      <h2>Today's Deals</h2>
+      <div class="deal-grid">
+        <div class="deal-item">
+          <img src="/img/images ut.jpeg " alt="Cement"  >
+          <h3>Portland Cement 50kg</h3>
+          <p><strong>Type:</strong> Ordinary Portland Cement</p>
+          <p><strong>Brand:</strong> UltraTech</p>
+          <p>₹400 <span class="original-price">₹500</span></p>
+          <button class="add-to-cart" data-id="1" data-name="Portland Cement 50kg" data-price="400">Add to Cart</button>
+        </div>
+        <div class="deal-item">
+          <img src="/img/istockphoto-1447942826-612x612 bricks.jpg" alt="Bricks">
+          <h3>Red Clay Bricks (1000 pcs)</h3>
+          <p><strong>Type:</strong> Clay Bricks</p>
+          <p><strong>Brand:</strong> Local Bricks</p>
+          <p>Contact for pricing</p>
+          <button class="add-to-cart" data-id="4" data-name="Red Clay Bricks (1000 pcs)" data-price="0">Add to Cart</button>
+        </div>
+        <div class="deal-item">
+          <img src="/img/M-Sand.jpeg" alt="Sand">
+          <h3>M-Sand 1 Ton</h3>
+          <p><strong>Type:</strong> Manufactured Sand</p>
+          <p><strong>Brand:</strong> River Sand</p>
+          <p>Request quote</p>
+          <button class="add-to-cart" data-id="7" data-name="M-Sand 1 Ton" data-price="0">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+    <section id="new-arrivals" class="new-arrivals">
+      <h2>New Arrivals</h2>
+      <div class="item-grid">
+        <div class="item" data-id="11" data-name="PVC Pipes 4 inch" data-price="0">
+          <img src="/img/4-inch-pvc-pipe-1571903521-5129213.jpeg" alt="PVC Pipes">
+          <h3>PVC Pipes 4 inch</h3>
+          <p>Refer to catalogue</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="item" data-id="14" data-name="Steel Rebars 12mm" data-price="52">
+          <img src="/img/images steel.jpeg" alt="Steel Rebars">
+          <h3>Steel Rebars 12mm</h3>
+          <p>₹52 per kg</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="item" data-id="5" data-name="Concrete Blocks" data-price="0">
+          <img src="/img/images block.jpeg" alt="Concrete Blocks">
+          <h3>Concrete Blocks</h3>
+          <p>Contact for pricing</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="item" data-id="8" data-name="P-Sand 1 Ton" data-price="0">
+          <img src="/img/images psand.jpeg" alt="P-Sand">
+          <h3>P-Sand 1 Ton</h3>
+          <p>Request quote</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="item" data-id="9" data-name="Gravel 20mm" data-price="0">
+          <img src="/img/20-mm-aggregate.jpg" alt="Gravel">
+          <h3>Gravel 20mm 1 Ton</h3>
+          <p>Request quote</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="item" data-id="16" data-name="Electrical Wires" data-price="0">
+          <img src="/img/71Dul7vevzL.jpg" alt="Electrical Wires">
+          <h3>Electrical Wires 1.5mm</h3>
+          <p>Contact for latest list</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2023 BuildMart. All rights reserved.</p>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
