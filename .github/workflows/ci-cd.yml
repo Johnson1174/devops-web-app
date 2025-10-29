@@ -8,7 +8,7 @@ on:
 
 env:
   DOCKER_REGISTRY: docker.io
-  IMAGE_NAME: shannan06/student-backend  # ✅ Changed from student_backend to student-backend
+  IMAGE_NAME: johnson1174/student-backend  # ✅ Changed from student_backend to student-backend
   GKE_CLUSTER: student-portal
   GKE_LOCATION: us-central1-a
   GCP_PROJECT: ku-gcp-hackathon

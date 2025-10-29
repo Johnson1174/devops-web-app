@@ -1,7 +1,7 @@
 variable "gcp_project_id" {
   description = "GCP Project ID"
   type        = string
-  default     = "ku-gcp-hackathon"  # Set your default project ID
+  default     = "safety-vision-ai-470016"  # Set your default project ID
 }
 
 variable "region" {

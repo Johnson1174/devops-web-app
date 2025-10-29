@@ -9,7 +9,7 @@ terraform {
 }
 
 provider "google" {
-  project = "ku-gcp-hackathon"
+  project = "safety-vision-ai-470016"
   region  = "us-central1"
 }
 
